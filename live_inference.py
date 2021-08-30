@@ -166,17 +166,6 @@ while True:
 			cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 		cv2.rectangle(frame, (startX, startY), (endX, endY), color, 2)
 
-	# # show the output frame
-	# cv2.imshow("Frame", frame)
-	# key = cv2.waitKey(1) & 0xFF
-
-	# # if the `q` key was pressed, break from the loop
-	# if key == ord("q"):
-	# 	break
-	
-	# read the next frame from the file
-	# (grabbed, frame) = vs.read()
-
 	# resize the frame and then detect people (and only people) in it
 	frame = imutils.resize(frame, width=750)
 	results = detect_people(frame, net, ln,
@@ -226,9 +215,19 @@ while True:
 
 	# draw the total number of social distancing violations on the
 	# output frame
-	text = "Social Distancing Violations: {}".format(len(violate))
-	cv2.putText(frame, text, (10, frame.shape[0] - 25),
-		cv2.FONT_HERSHEY_SIMPLEX, 0.85, (0, 0, 255), 3)
+	if len(results):
+		if len(violate) == 0:
+			text = "No Social Distancing violations found."
+			cv2.putText(frame, text, (10, frame.shape[0] - 25),
+			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+		else:
+			text = "Maintain Social Distancing, current violations: {}".format(len(violate))
+			cv2.putText(frame, text, (10, frame.shape[0] - 25),
+			cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+	else:
+		text = "No People detected!"
+		cv2.putText(frame, text, (10, frame.shape[0] - 25),
+		cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
 
 	# check to see if the output frame should be displayed to our
 	# screen
