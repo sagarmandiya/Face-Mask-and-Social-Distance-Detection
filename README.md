@@ -30,7 +30,7 @@
 <br>
 
 ## Inference on GPU:
-**The same above code can be run with the GPU, but will require OpenCV dnn module to be built on GPU, which can be done as instructed** [here](https://learnopencv.com/opencv-dnn-with-gpu-support/)**. Additionally the code can also be run on google colab to use the GPU for faster training of the MobileNetV2 model for Face Mask Detection.**
+**The same above code can be run with the GPU, but will require OpenCV dnn module to be built on top of CUDA, which can be done as instructed** [here](https://learnopencv.com/opencv-dnn-with-gpu-support/)**. Additionally the code can also be run on google colab to use the GPU for faster training of the MobileNetV2 model for Face Mask Detection.**
 <br>
 
 ## Contact Me:
