@@ -34,7 +34,7 @@
 <br>
 
 ## Contact Me:
-* **Website: [Sagar Mandiya](https://www.sagarmandiya.me)**
+* **Website: [Sagar Mandiya](https://www.sagarmandiya.com)**
 * **Blog: [Sagar Mandiya Blog](https://www.sagarmandiya.me/blog)**
 * **LinkedIn: [Sagar M](https://www.linkedin.com/in/sagar-m-647a2b183)**
 * **Instagram: [Sagar Mandiya](https://www.instagram.com/sagar_mandiya/)**
